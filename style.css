@@ -1,0 +1,11 @@
+/* ถ้าใช้ Tailwind แล้ว อาจไม่ต้องใช้ไฟล์นี้
+   แต่หากต้องการเพิ่ม animation หรือ style พิเศษ สามารถใส่ได้ที่นี่ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

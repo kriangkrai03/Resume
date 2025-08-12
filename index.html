@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - เกรียงไกร ภูทองก้าน</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind Config (optional) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            orbitron: ['Orbitron', 'sans-serif'],
+            robotoMono: ['Roboto Mono', 'monospace'],
+          },
+          colors: {
+            primary: '#ff4655',
+            dark: '#121212',
+            light: '#f5f5f5',
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-light font-robotoMono relative">
+
+  <!-- Particle Background -->
+  <div id="particles-js" class="fixed inset-0 z-0"></div>
+
+  <!-- Header / Hero -->
+  <header id="home" class="relative z-10 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-dark/80 backdrop-blur-md transition-transform duration-300 z-50" id="navbar">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-primary font-orbitron">KRIANGKRAI.P</div>
+        <div class="menu-icon md:hidden text-white cursor-pointer" id="menu-toggle">
+          <i class="fas fa-bars text-2xl"></i>
+        </div>
+        <ul class="hidden md:flex space-x-8 text-white" id="nav-links">
+          <li><a href="#home" class="hover:text-primary transition">หน้าแรก</a></li>
+          <li><a href="#about" class="hover:text-primary transition">เกี่ยวกับ</a></li>
+          <li><a href="#projects" class="hover:text-primary transition">ผลงาน</a></li>
+          <li><a href="#references" class="hover:text-primary transition">อ้างอิง</a></li>
+          <li><a href="#contact" class="hover:text-primary transition">ติดต่อ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 bg-dark/95 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-10 text-white text-xl transform translate-x-full transition-transform duration-300 md:hidden" id="mobile-menu">
+      <a href="#home" class="hover:text-primary transition">หน้าแรก</a>
+      <a href="#about" class="hover:text-primary transition">เกี่ยวกับ</a>
+      <a href="#projects" class="hover:text-primary transition">ผลงาน</a>
+      <a href="#references" class="hover:text-primary transition">อ้างอิง</a>
+      <a href="#contact" class="hover:text-primary transition">ติดต่อ</a>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="flex-1 flex items-center justify-center px-6 py-20">
+      <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 mt-20">
+        <div class="lg:w-1/2 text-center lg:text-left animate-float">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            สวัสดี ผม <span class="text-primary font-orbitron">เกรียงไกร ภูทองก้าน</span>
+          </h1>
+          <p class="text-lg mb-6 text-gray-300 leading-relaxed">
+            มีความสนใจด้านการออกแบบระบบ การพัฒนาเว็บไซต์ การเขียนโปรแกรม รวมถึงการสร้างเกม มีความสนใจในสิ่งใหม่ๆ และพร้อมพัฒนาทักษะในสายงานเทคโนโลยีอย่างต่อเนื่อง
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#projects" class="btn primary bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">
+              ดูผลงาน
+            </a>
+            <a href="#contact" class="btn outline border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition">
+              ติดต่อฉัน
+            </a>
+          </div>
+        </div>
+        <div class="lg:w-1/2 flex justify-center">
+          <img src="/image/465378932_1530700397643967_5795953763443277952_n.jpg"
+               alt="เกรียงไกร ภูทองก้าน - นักพัฒนาเว็บและเกม"
+               class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-lg">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section py-20 px-6 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12 text-primary font-orbitron">เกี่ยวกับฉัน</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <p class="text-lg mb-4 text-gray-300">
+            ฉันเป็นนักศึกษาปี 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏภูเก็ต มีความสนใจด้านการออกแบบระบบ การพัฒนาเว็บไซต์ การเขียนโปรแกรม รวมถึงการสร้างเกม มีความสนใจในสิ่งใหม่ๆ และพร้อมพัฒนาทักษะในสายงานเทคโนโลยีอย่างต่อเนื่อง
+          </p>
+          <p class="text-lg text-gray-300">
+            เคยทำโปรเจกต์เกี่ยวกับการทำเกมโดยใช้ Unreal Engine 5 และมีผลงานตีพิมพ์ในงานประชุมวิชาการระดับนานาชาติเรื่อง 
+            <strong class="text-white">"Development of Adventure Games and Puzzle Solving in Mysterious Museums"</strong> ผ่าน IEEE Xplore
+          </p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-4 flex items-center text-primary">
+            <i class="fas fa-cogs mr-2"></i> ทักษะ
+          </h3>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> HTML, CSS, JavaScript</li>
+            <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Unreal Engine (Blueprint)</li>
+            <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Game Design & Puzzle Logic</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="mt-12 grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-4 flex items-center text-primary">
+            <i class="fas fa-graduation-cap mr-2"></i> ผลการศึกษา
+          </h3>
+          <p class="text-gray-300">
+            <strong class="text-white">สาขาวิทยาการคอมพิวเตอร์</strong><br>
+            มหาวิทยาลัยราชภัฏภูเก็ต <br>
+            กำลังศึกษาอยู่ <strong class="text-primary">ปี 4</strong>
+          </p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-4 flex items-center text-primary">
+            <i class="fas fa-graduation-cap mr-2"></i> ผลการศึกษา
+          </h3>
+          <p class="text-gray-300">
+            <strong class="text-white">คณิต-อังกฤษ</strong><br>
+            โรงเรียนเมืองถลาง <br>
+            GPA: <strong class="text-primary">3.03</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="mt-12 bg-gray-800 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4 flex items-center text-primary">
+          <i class="fas fa-briefcase mr-2"></i> ประสบการณ์ทำงาน
+        </h3>
+        <p class="text-gray-300">
+          <strong class="text-white">ออกแบบเว็บไซต์ด้วย WordPress</strong><br>
+          บริษัท ภูเก็ตมัลติมีเดีย, ภูเก็ต<br>
+          มี.ค. 2568 - พ.ค. 2568
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12 text-primary font-orbitron">ผลงานที่ผ่านมา</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+          <img src="/image/Screenshot 2025-02-02 133822.png" alt="โปรเจกต์ Unreal Engine 5" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">โปรเจกต์ Unreal Engine 5</h3>
+            <p class="text-gray-300 mb-4">เกมแนวผจญภัยไขปริศนา ใช้ Blueprints ในการควบคุม</p>
+            <div class="flex gap-2">
+              <a href="https://ieeexplore.ieee.org/document/11088163" target="_blank" class="btn small bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">
+              ดูงานที่ตีพิมพ์
+            </a>
+
+            <a href="https://drive.google.com/drive/folders/1DTBxY5mPKtMmvgndTsUspoGrg3cbl3I5?usp=drive_link" target="_blank" class="btn small bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">
+              ตัวเกมที่ทำ
+            </a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+          <div class="w-full h-48 bg-primary flex items-center justify-center text-6xl text-white">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">โปรไฟล์เว็บไซต์นี้</h3>
+            <p class="text-gray-300 mb-4">ทำด้วย HTML, CSS, JS เพื่อสมัครฝึกงาน</p>
+            <a href="#" class="btn small border border-primary text-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition">
+              ดูซอร์สโค้ด
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section id="references" class="section py-20 px-6 bg-gray-900">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12 text-primary font-orbitron">แหล่งอ้างอิง</h2>
+      <div class="space-y-6">
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-2 flex items-center text-primary">
+            <i class="fas fa-file-alt mr-2"></i> งานตีพิมพ์ใน IEEE Xplore
+          </h3>
+          <p class="text-gray-300 mb-4"><strong>Development of Adventure Games and Puzzle Solving in Mysterious Museums</strong></p>
+          <a href="https://ieeexplore.ieee.org/document/11088163" target="_blank" class="btn small bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">
+            ดูงานวิจัย
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6 text-primary font-orbitron">ติดต่อฉัน</h2>
+      <p class="text-lg text-gray-300 mb-8">คุณสามารถติดต่อฉันผ่านช่องทางด้านล่าง หรือส่งอีเมลได้โดยตรง</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a href="mailto:kik550123@gmail.com" class="flex items-center gap-2 bg-primary/20 border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition">
+          <i class="fas fa-envelope"></i> kik550123@gmail.com
+        </a>
+        <a href="tel:0918266369" class="flex items-center gap-2 bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition">
+          <i class="fas fa-phone"></i> 091 826 6369
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-gray-400 py-12 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div class="footer-info">
+        <h3 class="text-2xl font-bold text-primary mb-2 font-orbitron">KRIANGKRAI.P</h3>
+        <p class="mb-1">นักศึกษา สาขาวิทยาการคอมพิวเตอร์</p>
+        <p>มหาวิทยาลัยราชภัฏภูเก็ต</p>
+      </div>
+      <div class="footer-contact">
+        <h4 class="text-lg font-bold mb-4 text-primary">ติดต่อ</h4>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2"><i class="fas fa-envelope"></i> <a href="mailto:kik550123@gmail.com" class="hover:text-primary">kik550123@gmail.com</a></li>
+          <li class="flex items-center gap-2"><i class="fas fa-phone"></i> 091 826 6369</li>
+          <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> ภูเก็ต, ประเทศไทย</li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4 class="text-lg font-bold mb-4 text-primary">ลิงก์สำคัญ</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:text-primary transition">หน้าแรก</a></li>
+          <li><a href="#about" class="hover:text-primary transition">เกี่ยวกับ</a></li>
+          <li><a href="#projects" class="hover:text-primary transition">ผลงาน</a></li>
+          <li><a href="#references" class="hover:text-primary transition">อ้างอิง</a></li>
+          <li><a href="#contact" class="hover:text-primary transition">ติดต่อ</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4 class="text-lg font-bold mb-4 text-primary">พบฉันบน</h4>
+        <ul class="space-y-2">
+          <li><a href="https://www.youtube.com/channel/UCTVFnLfYxIkVoKNX3MDVH4Q" target="_blank" class="flex items-center gap-2 hover:text-red-500 transition"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.tiktok.com/@kraip_123?lang=th-TH" target="_blank" class="flex items-center gap-2 hover:text-primary transition"><i class="fab fa-tiktok"></i> TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-sm">
+      <p>&copy; 2025 KRIANGKRAI.P. สงวนสิทธิ์ทุกประการ.</p>
+    </div>
+  </footer>
+
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

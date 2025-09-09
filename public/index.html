@@ -4,17 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio - เกรียงไกร ภูทองก้าน</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom Tailwind Config (optional) -->
   <script>
     tailwind.config = {
       theme: {
@@ -43,13 +36,10 @@
   </script>
 </head>
 <body class="bg-dark text-light font-robotoMono relative">
-
-  <!-- Particle Background -->
   <div id="particles-js" class="fixed inset-0 z-0"></div>
 
-  <!-- Header / Hero -->
+  <!-- menu -->
   <header id="home" class="relative z-10 min-h-screen flex flex-col">
-    <!-- Navigation -->
     <nav class="fixed w-full bg-dark/80 backdrop-blur-md transition-transform duration-300 z-50" id="navbar">
       <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="text-2xl font-bold text-primary font-orbitron">KRIANGKRAI.P</div>
@@ -66,7 +56,7 @@
       </div>
     </nav>
 
-    <!-- Mobile Menu -->
+
     <div class="fixed inset-0 bg-dark/95 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-10 text-white text-xl transform translate-x-full transition-transform duration-300 md:hidden" id="mobile-menu">
       <a href="#home" class="hover:text-primary transition">หน้าแรก</a>
       <a href="#about" class="hover:text-primary transition">เกี่ยวกับ</a>
@@ -75,9 +65,9 @@
       <a href="#contact" class="hover:text-primary transition">ติดต่อ</a>
     </div>
 
-    <!-- Hero Content -->
+
     <div class="flex-1 flex items-center justify-center px-6 py-20">
-      <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 mt-20">
+      <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 mt-2">
         <div class="lg:w-1/2 text-center lg:text-left animate-float">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">
             สวัสดี ผม <span class="text-primary font-orbitron">เกรียงไกร ภูทองก้าน</span>
@@ -95,7 +85,7 @@
           </div>
         </div>
         <div class="lg:w-1/2 flex justify-center">
-          <img src="/assets/465378932_1530700397643967_5795953763443277952_n.jpg"
+          <img src="assets\465378932_1530700397643967_5795953763443277952_n.jpg"
                alt="เกรียงไกร ภูทองก้าน - นักพัฒนาเว็บและเกม"
                class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-lg">
         </div>
@@ -103,7 +93,7 @@
     </div>
   </header>
 
-  <!-- About Section -->
+<!-- เกี่ยวกับฉัน -->
   <section id="about" class="section py-20 px-6 bg-gray-900">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12 text-primary font-orbitron">เกี่ยวกับฉัน</h2>
@@ -129,7 +119,7 @@
         </div>
       </div>
 
-      <!-- Education -->
+
       <div class="mt-12 grid md:grid-cols-2 gap-8">
         <div class="bg-gray-800 p-6 rounded-lg">
           <h3 class="text-xl font-bold mb-4 flex items-center text-primary">
@@ -153,7 +143,7 @@
         </div>
       </div>
 
-      <!-- Experience -->
+
       <div class="mt-12 bg-gray-800 p-6 rounded-lg">
         <h3 class="text-xl font-bold mb-4 flex items-center text-primary">
           <i class="fas fa-briefcase mr-2"></i> ประสบการณ์ทำงาน
@@ -167,13 +157,13 @@
     </div>
   </section>
 
-  <!-- Projects -->
+<!-- ผลงาน -->
   <section id="projects" class="section py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12 text-primary font-orbitron">ผลงานที่ผ่านมา</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
-          <img src="/assets/Screenshot 2025-02-02 133822.png" alt="โปรเจกต์ Unreal Engine 5" class="w-full h-48 object-cover">
+          <img src="assets/Screenshot 2025-02-02 133822.png" alt="โปรเจกต์ Unreal Engine 5" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">โปรเจกต์ Unreal Engine 5</h3>
             <p class="text-gray-300 mb-4">เกมแนวผจญภัยไขปริศนา ใช้ Blueprints ในการควบคุม</p>
@@ -205,7 +195,7 @@
     </div>
   </section>
 
-  <!-- References -->
+
   <section id="references" class="section py-20 px-6 bg-gray-900">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12 text-primary font-orbitron">แหล่งอ้างอิง</h2>
@@ -224,7 +214,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+
   <section id="contact" class="section py-20 px-6">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6 text-primary font-orbitron">ติดต่อฉัน</h2>
@@ -240,7 +230,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- footer -->
   <footer class="bg-dark text-gray-400 py-12 px-6">
     <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
       <div class="footer-info">
@@ -278,10 +268,6 @@
       <p>&copy; 2025 KRIANGKRAI.P. สงวนสิทธิ์ทุกประการ.</p>
     </div>
   </footer>
-
-  <!-- Particles.js CDN -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
